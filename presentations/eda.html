@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis Exploratorio de Datos (EDA) - Daniel Castillo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .reveal { background: linear-gradient(135deg, #050d2b 0%, #062f45 55%, #06a69b 100%); }
+        .reveal .slides section {
+            background: rgba(5, 13, 43, 0.94);
+            border: 1px solid rgba(6, 166, 155, 0.22);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+            border-radius: 24px;
+            padding: 2.5rem 3rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .reveal h1, .reveal h2, .reveal h3 { color: #f8fbfb; text-shadow: 2px 2px 10px rgba(0,0,0,0.35); }
+        .reveal h1 { font-size: 3rem; letter-spacing: -0.03em; }
+        .reveal h2 { font-size: 2.4rem; margin-bottom: 1rem; }
+        .reveal h3 { font-size: 1.4rem; color: #bfece8; margin-bottom: 0.75rem; }
+        .reveal p { color: #dbe1e8; line-height: 1.8; font-size: 1.05rem; }
+        .reveal ul { padding-left: 1.2rem; }
+        .reveal ul li { color: #dbe1e8; margin-bottom: 0.85rem; font-size: 1rem; }
+        .code-block { background: rgba(0, 0, 0, 0.4); padding: 1.5rem; border-radius: 1rem; border-left: 5px solid #06a69b; box-shadow: 0 20px 50px rgba(0,0,0,0.32); margin: 1.5rem 0; }
+        .reveal img { max-width: 80%; height: auto; border-radius: 1rem; box-shadow: 0 24px 60px rgba(0,0,0,0.45); border: 1px solid rgba(255,255,255,0.08); }
+        .diagram { text-align: center; margin: 2rem 0; }
+        .highlight { background: rgba(6,166,155,0.18); color: #eef7f6; padding: 0.6rem 0.85rem; border-radius: 0.65rem; display: inline-block; margin-bottom: 0.75rem; }
+        .reveal .slides section:nth-child(even) { background: rgba(5, 13, 43, 0.88); }
+        .reveal .slides section:nth-child(odd) { background: rgba(6, 46, 76, 0.92); }
+        .reveal .slides section > p { max-width: 780px; }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Análisis Exploratorio de Datos (EDA)</h1>
+                <h3>Daniel Eduardo Castillo Uparela</h3>
+                <p>Ingeniero de Sistemas y Computación</p>
+                <img src="../img/project_01.jpeg" alt="EDA Analysis" class="diagram">
+            </section>
+
+            <section>
+                <h2>¿Qué es EDA?</h2>
+                <p>Proceso de analizar y visualizar datos para entender su estructura, patrones y características principales.</p>
+                <div class="diagram">
+                    <img src="../img/project_02.jpg" alt="Data Exploration">
+                </div>
+                <ul>
+                    <li class="highlight">Entender la distribución de variables</li>
+                    <li class="highlight">Identificar outliers</li>
+                    <li class="highlight">Descubrir correlaciones</li>
+                    <li class="highlight">Preparar datos para modelado</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Herramientas para EDA</h2>
+                <h3>Python con Pandas y Matplotlib</h3>
+                <div class="code-block">
+                    <pre><code class="language-python">import pandas as pd
+import matplotlib.pyplot as plt
+
+# Cargar datos
+df = pd.read_csv('datos.csv')
+
+# Estadísticas descriptivas
+print(df.describe())
+
+# Visualización
+plt.hist(df['columna'])
+plt.show()</code></pre>
+                </div>
+                <div class="diagram">
+                    <img src="../img/project_03.jpg" alt="Python Tools">
+                </div>
+            </section>
+
+            <section>
+                <h2>Técnicas de Visualización</h2>
+                <div class="diagram">
+                    <img src="../img/profile.jpg" alt="Visualization Techniques">
+                </div>
+                <ul>
+                    <li class="highlight">Histogramas</li>
+                    <li class="highlight">Diagramas de caja</li>
+                    <li class="highlight">Gráficos de dispersión</li>
+                    <li class="highlight">Matrices de correlación</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Identificación de Patrones</h2>
+                <p>Análisis de tendencias y anomalías</p>
+                <div class="diagram">
+                    <img src="../img/icon.png" alt="Pattern Recognition">
+                </div>
+                <ul>
+                    <li>Distribuciones normales vs sesgadas</li>
+                    <li>Valores atípicos</li>
+                    <li>Relaciones entre variables</li>
+                    <li>Patrones temporales</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Preparación para Modelado</h2>
+                <ul>
+                    <li class="highlight">Tratamiento de valores faltantes</li>
+                    <li class="highlight">Transformaciones de variables</li>
+                    <li class="highlight">Selección de features</li>
+                    <li class="highlight">Validación de supuestos</li>
+                </ul>
+                <div class="diagram">
+                    <img src="../img/project_01.jpeg" alt="Data Preparation">
+                </div>
+            </section>
+
+            <section>
+                <h1>¡Gracias!</h1>
+                <p>¿Preguntas?</p>
+                <p>Contacto: castillouparela10@gmail.com</p>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: true,
+            transition: 'slide',
+            backgroundTransition: 'fade'
+        });
+    </script>
+    <script>
+        // Verificar autenticación
+        if (!sessionStorage.getItem('authenticated')) {
+            window.location.href = '../index.html';
+        }
+    </script>
+</body>
+</html>

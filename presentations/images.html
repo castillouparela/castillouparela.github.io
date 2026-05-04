@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generación de Imágenes con IA - Daniel Castillo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .reveal { background: linear-gradient(135deg, #050d2b 0%, #062f45 55%, #06a69b 100%); }
+        .reveal .slides section {
+            background: rgba(5, 13, 43, 0.94);
+            border: 1px solid rgba(6, 166, 155, 0.22);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+            border-radius: 24px;
+            padding: 2.5rem 3rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .reveal h1, .reveal h2, .reveal h3 { color: #f8fbfb; text-shadow: 2px 2px 10px rgba(0,0,0,0.35); }
+        .reveal h1 { font-size: 3rem; letter-spacing: -0.03em; }
+        .reveal h2 { font-size: 2.4rem; margin-bottom: 1rem; }
+        .reveal h3 { font-size: 1.4rem; color: #bfece8; margin-bottom: 0.75rem; }
+        .reveal p { color: #dbe1e8; line-height: 1.8; font-size: 1.05rem; }
+        .reveal ul { padding-left: 1.2rem; }
+        .reveal ul li { color: #dbe1e8; margin-bottom: 0.85rem; font-size: 1rem; }
+        .code-block { background: rgba(0, 0, 0, 0.4); padding: 1.5rem; border-radius: 1rem; border-left: 5px solid #06a69b; box-shadow: 0 20px 50px rgba(0,0,0,0.32); margin: 1.5rem 0; }
+        .reveal img { max-width: 80%; height: auto; border-radius: 1rem; box-shadow: 0 24px 60px rgba(0,0,0,0.45); border: 1px solid rgba(255,255,255,0.08); }
+        .diagram { text-align: center; margin: 2rem 0; }
+        .highlight { background: rgba(6,166,155,0.18); color: #eef7f6; padding: 0.6rem 0.85rem; border-radius: 0.65rem; display: inline-block; margin-bottom: 0.75rem; }
+        .reveal .slides section:nth-child(even) { background: rgba(5, 13, 43, 0.88); }
+        .reveal .slides section:nth-child(odd) { background: rgba(6, 46, 76, 0.92); }
+        .reveal .slides section > p { max-width: 780px; }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Generación de Imágenes con IA</h1>
+                <h3>Daniel Eduardo Castillo Uparela</h3>
+                <p>Ingeniero de Sistemas y Computación</p>
+                <img src="../img/project_01.jpeg" alt="Image Generation" class="diagram">
+            </section>
+
+            <section>
+                <h2>¿Qué es la Generación de Imágenes?</h2>
+                <p>Uso de modelos de IA para crear, editar y manipular imágenes de manera automática.</p>
+                <div class="diagram">
+                    <img src="../img/project_02.jpg" alt="AI Image Creation">
+                </div>
+                <ul>
+                    <li class="highlight">Modelos generativos</li>
+                    <li class="highlight">Redes neuronales convolucionales</li>
+                    <li class="highlight">Aplicaciones creativas y prácticas</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Modelos Principales</h2>
+                <h3>DALL-E, Stable Diffusion, Midjourney</h3>
+                <div class="diagram">
+                    <img src="../img/project_03.jpg" alt="Main Models">
+                </div>
+                <ul>
+                    <li>DALL-E: Basado en transformers</li>
+                    <li>Stable Diffusion: Modelo de difusión</li>
+                    <li>Midjourney: Enfoque artístico</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Cómo Funcionan</h2>
+                <h3>Proceso de Generación</h3>
+                <div class="code-block">
+                    <pre><code class="language-python"># Ejemplo con Stable Diffusion
+from diffusers import StableDiffusionPipeline
+
+# Cargar modelo
+pipe = StableDiffusionPipeline.from_pretrained("CompVis/stable-diffusion-v1-4")
+
+# Generar imagen
+prompt = "Un paisaje futurista con robots"
+image = pipe(prompt).images[0]
+image.save("generated_image.png")</code></pre>
+                </div>
+                <div class="diagram">
+                    <img src="../img/profile.jpg" alt="Generation Process">
+                </div>
+            </section>
+
+            <section>
+                <h2>Técnicas Avanzadas</h2>
+                <div class="diagram">
+                    <img src="../img/icon.png" alt="Advanced Techniques">
+                </div>
+                <ul>
+                    <li class="highlight">Image-to-Image</li>
+                    <li class="highlight">Inpainting</li>
+                    <li class="highlight">Style Transfer</li>
+                    <li class="highlight">Super Resolution</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Aplicaciones</h2>
+                <div class="diagram">
+                    <img src="../img/project_01.jpeg" alt="Applications">
+                </div>
+                <ul>
+                    <li class="highlight">Diseño gráfico</li>
+                    <li class="highlight">Arte digital</li>
+                    <li class="highlight">Marketing y publicidad</li>
+                    <li class="highlight">Educación y visualización</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Consideraciones</h2>
+                <ul>
+                    <li class="highlight">Derechos de autor</li>
+                    <li class="highlight">Ética en la creación de contenido</li>
+                    <li class="highlight">Calidad vs cantidad</li>
+                    <li class="highlight">Impacto en empleos creativos</li>
+                </ul>
+                <div class="diagram">
+                    <img src="../img/project_02.jpg" alt="Considerations">
+                </div>
+            </section>
+
+            <section>
+                <h1>¡Gracias!</h1>
+                <p>¿Preguntas?</p>
+                <p>Contacto: castillouparela10@gmail.com</p>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: true,
+            transition: 'slide',
+            backgroundTransition: 'fade'
+        });
+    </script>
+    <script>
+        // Verificar autenticación
+        if (!sessionStorage.getItem('authenticated')) {
+            window.location.href = '../index.html';
+        }
+    </script>
+</body>
+</html>

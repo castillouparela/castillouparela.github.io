@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingesta de Datos con SQL - Daniel Castillo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .reveal { background: linear-gradient(135deg, #050d2b 0%, #062f45 55%, #06a69b 100%); }
+        .reveal .slides section {
+            background: rgba(5, 13, 43, 0.94);
+            border: 1px solid rgba(6, 166, 155, 0.22);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+            border-radius: 24px;
+            padding: 2.5rem 3rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .reveal h1, .reveal h2, .reveal h3 { color: #f8fbfb; text-shadow: 2px 2px 10px rgba(0,0,0,0.35); }
+        .reveal h1 { font-size: 3rem; letter-spacing: -0.03em; }
+        .reveal h2 { font-size: 2.4rem; margin-bottom: 1rem; }
+        .reveal h3 { font-size: 1.4rem; color: #bfece8; margin-bottom: 0.75rem; }
+        .reveal p { color: #dbe1e8; line-height: 1.8; font-size: 1.05rem; }
+        .reveal ul { padding-left: 1.2rem; }
+        .reveal ul li { color: #dbe1e8; margin-bottom: 0.85rem; font-size: 1rem; }
+        .code-block { background: rgba(0, 0, 0, 0.4); padding: 1.5rem; border-radius: 1rem; border-left: 5px solid #06a69b; box-shadow: 0 20px 50px rgba(0,0,0,0.32); margin: 1.5rem 0; }
+        .reveal img { max-width: 80%; height: auto; border-radius: 1rem; box-shadow: 0 24px 60px rgba(0,0,0,0.45); border: 1px solid rgba(255,255,255,0.08); }
+        .diagram { text-align: center; margin: 2rem 0; }
+        .highlight { background: rgba(6,166,155,0.18); color: #eef7f6; padding: 0.6rem 0.85rem; border-radius: 0.65rem; display: inline-block; margin-bottom: 0.75rem; }
+        .reveal .slides section:nth-child(even) { background: rgba(5, 13, 43, 0.88); }
+        .reveal .slides section:nth-child(odd) { background: rgba(6, 46, 76, 0.92); }
+        .reveal .slides section > p { max-width: 780px; }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Ingesta de Datos con SQL</h1>
+                <h3>Daniel Eduardo Castillo Uparela</h3>
+                <p>Ingeniero de Sistemas y Computación</p>
+                <img src="../img/project_01.jpeg" alt="SQL Ingesta" class="diagram">
+            </section>
+
+            <section>
+                <h2>¿Qué es la Ingesta de Datos?</h2>
+                <p>Proceso de recopilar, importar y preparar datos desde diversas fuentes para su análisis y procesamiento.</p>
+                <div class="diagram">
+                    <img src="../img/project_02.jpg" alt="Proceso ETL">
+                </div>
+                <ul>
+                    <li class="highlight">Extracción de datos</li>
+                    <li class="highlight">Transformación</li>
+                    <li class="highlight">Carga (ETL)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>SQL para Ingesta de Datos</h2>
+                <h3>Comandos Principales</h3>
+                <div class="code-block">
+                    <pre><code class="language-sql">-- Crear tabla
+CREATE TABLE datos_ingesta (
+    id INT PRIMARY KEY,
+    nombre VARCHAR(100),
+    fecha_ingesta DATE,
+    valor DECIMAL(10,2)
+);
+
+-- Insertar datos
+INSERT INTO datos_ingesta VALUES
+(1, 'Dato 1', '2024-01-01', 100.50),
+(2, 'Dato 2', '2024-01-02', 200.75);
+
+-- Consultar datos
+SELECT * FROM datos_ingesta;</code></pre>
+                </div>
+            </section>
+
+            <section>
+                <h2>Pipelines de Datos</h2>
+                <p>Automatización del proceso de ingesta</p>
+                <div class="diagram">
+                    <img src="../img/project_03.jpg" alt="Data Pipeline">
+                </div>
+                <ul>
+                    <li>Conexión a fuentes de datos</li>
+                    <li>Validación de datos</li>
+                    <li>Transformaciones</li>
+                    <li>Carga incremental</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Mejores Prácticas</h2>
+                <ul>
+                    <li class="highlight">Validar tipos de datos</li>
+                    <li class="highlight">Manejar valores nulos</li>
+                    <li class="highlight">Optimizar consultas</li>
+                    <li class="highlight">Monitorear rendimiento</li>
+                </ul>
+                <div class="diagram">
+                    <img src="../img/profile.jpg" alt="Best Practices">
+                </div>
+            </section>
+
+            <section>
+                <h1>¡Gracias!</h1>
+                <p>¿Preguntas?</p>
+                <p>Contacto: castillouparela10@gmail.com</p>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: true,
+            transition: 'slide',
+            backgroundTransition: 'fade'
+        });
+    </script>
+    <script>
+        // Verificar autenticación
+        if (!sessionStorage.getItem('authenticated')) {
+            window.location.href = '../index.html';
+        }
+    </script>
+</body>
+</html>
