@@ -1,0 +1,2 @@
+Soy Daniel Castillo, Ingeniero de Sistemas y Computación con especialización en Inteligencia Artificial y Ciencia de Datos. Diseño e implemento soluciones data-driven con Python, SQL y prácticas de MLOps para transformar datos en resultados concretos y generar valor real para las empresas.
+Además, disfruto del fútbol, la lectura, la astronomía, el cine, los viajes, el senderismo y la fotografía.
